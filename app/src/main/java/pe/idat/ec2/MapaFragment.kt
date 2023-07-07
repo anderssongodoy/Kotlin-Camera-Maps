@@ -28,13 +28,7 @@ class MapaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
-        mapFragment?.getMapAsync(callback)
     }
 
-    override fun onMapReady(p0: GoogleMap){
-        map = p0
-        val Lima = LatLng(-12.0431800, -77.0282400)
-        map.addMarker(MarkerOptions().position(Lima).title("Capital del Perú"))
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(Lima, 16f))
-    }
+
 }
